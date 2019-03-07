@@ -19,3 +19,8 @@ def rnn_net(ipt, input_dim):
 
     out = fluid.layers.fc(input = last, size = 2, act = 'softmax')
     return out
+
+def lstm_net(ipt, input_dim):
+    emb = fluid.layers.embedding(input = ipt, size = [input_dim, 128], is_sparse = True)
+
+    fc1 = fluid.layers.fc

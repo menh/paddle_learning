@@ -1,3 +1,4 @@
+# ���Իع�
 # -*- utf-8
 import paddle.fluid as fluid
 import numpy as np
@@ -43,7 +44,7 @@ result = exe.run(program = test_program,
                 fetch_list = [net])
 print (result)
 print (" %0.5f:" % result[0][0][0])
-
+'''
 import paddle.dataset.uci_housing as uci_housing
 
 train_reader = paddle.batch(reader = uci_housing.train(), batch_size = 128)
@@ -64,3 +65,4 @@ for pass_id in range(10):
                             feed = feeder.feed(data),
                             fetch_list = [avg_cost])
     print('Test:%d, Cost:%0.5f' % (pass_id, test_cost[0][0]))
+'''

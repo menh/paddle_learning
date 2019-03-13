@@ -1,6 +1,6 @@
 # 只有理论基础而无实践基础，或只会写算法不会用框架
 #经过一段时间在网上的摸爬滚打，最终选定一系列博客，按照这个学习并添加自己的理解尝试
-
+# 计算过两数之和
 import paddle.fluid as fluid
 import numpy as np
 
@@ -20,8 +20,6 @@ a2 = input('a = ')
 b2 = input('b = ')
 
 y1 = fluid.layers.sum(x = [a, b])
-
-
 
 place = fluid.CPUPlace()
 exe  =fluid.executor.Executor(place)

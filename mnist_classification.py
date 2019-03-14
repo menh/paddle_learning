@@ -57,7 +57,7 @@ test_reader = paddle.batch(mnist.test(), batch_size = 128)
 place = fluid.CPUPlace()
 exe = fluid.Executor(place)
 
-exe.run(fluid.default_main_program())
+exe.run(fluid.default_startup_program())
 
 feeder = fluid.DataFeeder(place = place, feed_list = [image, label])
 

@@ -1,61 +1,137 @@
 #include <iostream>
+#include <vector>
+#include <list>
 using namespace std;
+class Subject;
+class Observer{
+	public:
+		Observer()
+		{
+			state = "³õÊ¼";
+		}
+		
+		virtual ~Observer()
+		{
+			
+		}
+		virtual void update(Subject* subject) = 0;
+		virtual void setState(string& str){
+			this->state = str;
+		}
+		virtual string getState(){
+			return this->state;
+		}
+		virtual void printInfo() = 0;
+		
+	private:
+		string state;
+};
+
 class Subject{
 	public:
 		Subject()
 		{
-			observers = new vector<Observer*>();
+			observers = new list<Observer*>();
 		}
 		
-		virtual ~Subject()
+		~Subject()
 		{
 			
 		}
 		
-		virtual void attach(Observer* obs)
+		void attach(Observer* obs)
 		{
 			if(obs != NULL)
 			{
-				observers.push_back(obs);
+				observers->push_back(obs);
 			}
 		}
 		
-		virtual void detach(Observer* obs)
+		void detach(Observer* obs)
 		{
 			if(obs != NULL)
 			{
-				observers.remove(obs);
+				observers->remove(obs);
 			}
 		}
 		
-		virtual void notify()
+		void notify()
 		{
-			for(int observers_i = 0; observers_i < observers.size(); ++observers_i++)
+			list<Observer*>::iterator iter;
+			for(iter = observers->begin(); iter!= observers->end(); ++iter)
 			{
-				observers[observers_i]->update();
+				(*iter)->update(this);
 			}
+		}
+		
+		void setState(const string& str)
+		{
+			this->state = str;
+		}
+		
+		string getState()
+		{
+			return this->state;
 		}
 	private:
-		vector<Observer*>* observers;
+		list<Observer*>* observers;
+		string state;
 }; 
 
-class ConcreteSubject: Subject{
+
+
+
+
+class ConcreteObserverA: public Observer{
 	public:
-		ConcreteSubject();
-		~ConcreteSubject();
+		ConcreteObserverA(){
+			
+		}
+		~ConcreteObserverA(){
+			
+		}
+		virtual void update(Subject* subject){
+			string str = subject->getState();
+			this->setState(str);
+		}
+		void printInfo(){
+			cout<<"ConcreteObserverA change to " + this->getState() <<endl;
+		}
 };
 
-class Observer{
+class ConcreteObserverB: public Observer{
 	public:
-		Observer();
-		virtual ~Observer();
-		virtual update() = 0;
+		ConcreteObserverB(){
+			
+		}
+		~ConcreteObserverB(){
+			
+		}
+		virtual void update(Subject* subject){
+			string str = subject->getState();
+			this->setState(str);
+		}
+		void printInfo(){
+			cout<<"ConcreteObserverB change to " + this->getState() <<endl;
+		}
 };
-
-class ConcreteObserverA
 
 int main()
 {
+	Subject* subject = new Subject();
+	Observer* observerA = new ConcreteObserverA();
+	Observer* observerB = new ConcreteObserverB();
 	
+	subject->attach(observerA);
+	subject->attach(observerB);
+	
+	subject->setState("·¢²¼¶©ÔÄ");
+	
+	observerA->printInfo();
+	observerB->printInfo();
+	
+	subject->notify();
+	observerA->printInfo();
+	observerB->printInfo();
 	return 0;
 }

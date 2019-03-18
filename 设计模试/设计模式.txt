@@ -34,3 +34,8 @@ https://blog.csdn.net/qq_36258792/article/details/73882019
 
 发布订阅模式
 https://blog.csdn.net/u011040361/article/details/45308855
+
+代理模式
+https://www.cnblogs.com/wrbxdj/p/5267370.html
+
+工厂模式

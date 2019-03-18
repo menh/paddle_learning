@@ -1,0 +1,22 @@
+paddle 学习
+https://blog.csdn.net/qq_33200967/article/details/83689527
+
+全连接神经网络FC
+https://blog.csdn.net/weixinhum/article/details/79273480
+
+
+卷积神经网络CNN
+https://www.cnblogs.com/skyfsm/p/6790245.html
+
+https://blog.csdn.net/weixin_36836622?t=1
+
+https://www.cnblogs.com/alexcai/p/5506806.html 详细
+
+循环神经网络RNN
+https://blog.csdn.net/qq_39422642/article/details/78676567
+
+对抗网络GAN
+https://blog.csdn.net/u014518506/article/details/79532636
+
+Spring security
+https://blog.csdn.net/liushangzaibeijing/article/details/81220610

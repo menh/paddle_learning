@@ -1,5 +1,4 @@
 # -*- utf-8
-
 import paddle
 import paddle.dataset.imdb as imdb
 import paddle.fluid as fluid

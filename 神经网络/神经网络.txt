@@ -1,9 +1,11 @@
+大佬刘建平 https://www.cnblogs.com/pinard/category/894692.html
+
 paddle 学习
 https://blog.csdn.net/qq_33200967/article/details/83689527
 
 全连接神经网络FC
 https://blog.csdn.net/weixinhum/article/details/79273480
-
+对每个结点进行全连接加权，求和
 
 卷积神经网络CNN
 https://www.cnblogs.com/skyfsm/p/6790245.html

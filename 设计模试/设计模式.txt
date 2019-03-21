@@ -39,3 +39,10 @@ https://blog.csdn.net/u011040361/article/details/45308855
 https://www.cnblogs.com/wrbxdj/p/5267370.html
 
 工厂模式
+
+
+布隆过滤器
+
+内存池实现
+https://blog.csdn.net/neustar1/article/details/7478311
+https://blog.csdn.net/xjtuse2014/article/details/52302083

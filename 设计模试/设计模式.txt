@@ -44,5 +44,9 @@ https://www.cnblogs.com/wrbxdj/p/5267370.html
 布隆过滤器
 
 内存池实现
+https://blog.csdn.net/walkerkalr/article/details/22263351 rebind用法
 https://blog.csdn.net/neustar1/article/details/7478311
-https://blog.csdn.net/xjtuse2014/article/details/52302083
+https://blog.csdn.net/xjtuse2014/article/details/52302083 //再看
+
+
+https://www.cnblogs.com/weiyouqing/p/9642986.html 类所占内存
